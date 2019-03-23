@@ -12,6 +12,8 @@
 class Classroom < ActiveRecord::Base
   has_many :classroom_students
   has_many :students, through: :classroom_students
+  validates :semester, presence: true
+  validates :course_name, presence: true
 
   def oldest_student
     students.where("birthday is not null").order("birthday asc").first
