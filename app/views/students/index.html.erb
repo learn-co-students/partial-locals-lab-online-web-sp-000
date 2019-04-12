@@ -1,0 +1,9 @@
+<% if @students.instance_of? Student::ActiveRecord_Relation %>
+
+  <%= render partial: 'student', collection: @students %>
+
+<% else %>
+
+  <%= render partial: 'student', locals: {student: @students} %>
+
+<% end %>
