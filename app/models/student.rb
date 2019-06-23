@@ -13,4 +13,8 @@
 class Student < ActiveRecord::Base
   has_many :classroom_students
   has_many :classrooms, through: :classroom_students
+
+  def self.search(str)
+    Student.all.find_by_sql("select * from students where name like '%#{str}%'")
+  end
 end
