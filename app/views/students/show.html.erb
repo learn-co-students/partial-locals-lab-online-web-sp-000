@@ -1,3 +1,7 @@
 <h1>Student Info</h1>
+<%= render partial: 'student', locals: {student: @student} %>
 
-<%= render 'student' %>
+<h2>Classes:</h2>
+<% @student.classrooms.each do |classroom| %>
+    <%= render partial: 'classrooms/classroom', locals: {classroom: @classroom}%>
+<% end %>
