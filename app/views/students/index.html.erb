@@ -1,0 +1,7 @@
+<h1>Students</h1>
+
+<%= render 'search_form' %>
+
+<%= @students.each do |std| %>
+  <%= render partial: 'student', locals: {student: std} %>
+<% end %>
