@@ -1,0 +1,4 @@
+<h1>Index for students</h1>
+<% @students.reverse.each do |student|%>
+  <%= render partial: 'student', locals: {student: student }%>
+<% end %>
