@@ -1,0 +1,7 @@
+<h1> Student Look up </h1>
+
+
+
+<% Student.all.select do |s|  %>
+<%= render partial:'student', locals: {student: s}    %>
+<% end  %>
