@@ -1,3 +1,5 @@
 <%= render partial: 'classroom', locals: { classroom: @classroom } %>
 
 <h2>Students</h2>
+
+<%= render partial: "students/student", collection: @classroom.students, as: :student %>
